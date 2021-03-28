@@ -1,12 +1,23 @@
-const name = "mj";
-const age = 20;
-const gender = "male";
 
-const sayHi = (name: string,age:number,gender:string) :void=>{
-    console.log(`Hello ${name}, you are ${age}, you are a ${gender} `)
+
+interface Human {
+    name : string;
+    age : number;
+    gender : string;
+}
+
+const person = {
+    name : "mj",
+    age : 20,
+    gender : "male"
+}
+
+
+const sayHi = (person:Human) :void=>{
+    console.log(`Hello ${person.name}, you are ${person.age}, you are a ${person.gender} `)
 };
 
-sayHi("minjae",age,gender);
+sayHi(person);
 
 export {};  // 이 파일이 모듈이 되는걸 이해시키는 코드
 
